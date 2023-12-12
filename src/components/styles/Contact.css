@@ -1,0 +1,11 @@
+.ContactSection {
+    display: flex;
+    justify-content: center;
+}
+
+.ContactForm {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

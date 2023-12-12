@@ -1,8 +1,32 @@
+import {FaGithub, FaLinkedin} from 'react-icons/fa'
+import {IoDocumentText} from 'react-icons/io5';
+import './styles/Hero.css';
+
 function Hero(): React.JSX.Element
 {
     return (
-        <>
-        </>
+        <div className="HeroSection">
+            <div className="HeroText">
+                <h1>
+                    Hi, My Name is Rich.
+                </h1>
+                <h4>
+                    I'm a developer with experience in front-end applications
+                    and HTML5 game development.
+                </h4>
+                <div className="LinkButtons">
+                    <a href="" target="_blank">
+                        <IoDocumentText size={40}/>
+                    </a>
+                    <a href="https://github.com/RichPBee" target="_blank">
+                        <FaGithub size={40} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/rich-balfourth-16a54324b/" target="_blank">
+                        <FaLinkedin size={40} />
+                    </a>
+                </div>
+            </div>
+        </div>
     )
 }
 

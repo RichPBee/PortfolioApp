@@ -1,0 +1,20 @@
+.HeroSection {
+    margin-top: 6%;
+    height: 100%;
+}
+
+.HeroText {
+    text-align: center;
+}
+
+.LinkButtons {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.LinkButtons > * {
+    width: 20%;
+    height: 30%;
+}
+

@@ -3,8 +3,8 @@ import './styles/Navbar.css';
 function Navbar(): React.JSX.Element
 {
     return (
-        <header>
-            <ul className="Navbar">
+        <nav className="Navbar">
+            <ul className="NavLinks">
                 <li>
                     <a href="">Skills</a>
                 </li>
@@ -21,8 +21,8 @@ function Navbar(): React.JSX.Element
                     <a href="">Blogs & Devlogs</a>
                 </li>
             </ul>
-        </header>
-    )
+        </nav>
+    );
 }
 
 export default Navbar;

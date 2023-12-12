@@ -1,8 +1,15 @@
 .Navbar
-{
-    display: flex;
-    justify-content: right;
+{   
     width: 100%;
+    height: 6.5%;
+    position: fixed;
+    top: 0;
+}
+
+.NavLinks {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
     gap: 1%;
     background-color: rgb(218, 218, 203);
     list-style-type: none;

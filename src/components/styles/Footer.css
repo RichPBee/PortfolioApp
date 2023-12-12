@@ -1,0 +1,11 @@
+.LinkButtons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.LinkButtons > a {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
