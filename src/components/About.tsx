@@ -3,7 +3,7 @@ import './styles/About.css';
 function About(): React.JSX.Element
 {
     return (
-        <div className="AboutSection" id="About">
+        <div className="AboutSection PageSection" id="About">
             <div className="AboutImage">
                 <h1>IMAGE</h1>
             </div>
@@ -15,7 +15,7 @@ function About(): React.JSX.Element
                     That in itself is quite fun, but is entirely worthless ultimately.
                 </p>
                 <button>
-                    Click For More!
+                    Read My Bio
                 </button>
             </div>
         </div>

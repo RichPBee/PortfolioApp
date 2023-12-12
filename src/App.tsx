@@ -14,7 +14,7 @@ function App(): React.JSX.Element {
 
   useEffect(() => {
     const toggleScrollUpBtn = () => { 
-      window.scrollY > 150 ? setShowButton(true) : setShowButton(false);
+      window.scrollY > 175 ? setShowButton(true) : setShowButton(false);
     }
 
     window.addEventListener('scroll', toggleScrollUpBtn);
@@ -22,7 +22,7 @@ function App(): React.JSX.Element {
     return () => {
       window.removeEventListener('scroll', toggleScrollUpBtn);
     }
-  }, [])
+  });
 
   return (
     <main className="MainPage">

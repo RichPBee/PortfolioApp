@@ -5,7 +5,7 @@ import './styles/Hero.css';
 function Hero(): React.JSX.Element
 {
     return (
-        <div className="HeroSection">
+        <div className="HeroSection PageSection">
             <div className="HeroText">
                 <h1>
                     Hi, My Name is Rich.
@@ -16,13 +16,13 @@ function Hero(): React.JSX.Element
                 </h4>
                 <div className="LinkButtons">
                     <a href="" target="_blank">
-                        <IoDocumentText size={40}/>
+                        <IoDocumentText size={100}/>
                     </a>
                     <a href="https://github.com/RichPBee" target="_blank">
-                        <FaGithub size={40} />
+                        <FaGithub size={100} />
                     </a>
                     <a href="https://www.linkedin.com/in/rich-balfourth-16a54324b/" target="_blank">
-                        <FaLinkedin size={40} />
+                        <FaLinkedin size={100} />
                     </a>
                 </div>
             </div>

@@ -1,20 +1,50 @@
 .SkillsSection {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    background-color: rgb(175, 212, 188);
+    height: 50vh !important;
 }
 
 .SkillCards {
     display: flex;
     justify-content: space-around;
+    height: 62%;
 }
 
 .Subcategories {
     display: flex;
     justify-content: space-around;
-    width: 100%;
 }
 
 .SkillCard {
     width: 20%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
+}
+
+.SkillCard > h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 20%;
+    text-align: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.SkillCard > ul {
+    list-style-type: none;
+    min-height: 100%;
+    padding: 0;
+    text-align: center;
+    line-height: 25px;
 }

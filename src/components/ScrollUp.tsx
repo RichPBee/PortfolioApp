@@ -3,7 +3,7 @@ import { FaArrowAltCircleUp } from "react-icons/fa";
 function ScrollUp()
 {
     const handleScrollUp = () => { 
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scroll({top: 0, behavior: "smooth"});
     }
 
     return (
@@ -12,7 +12,7 @@ function ScrollUp()
                 <FaArrowAltCircleUp size={40}/>
             </a>
         </div>
-    )
+    );
 }
 
 export default ScrollUp;
