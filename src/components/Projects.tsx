@@ -6,7 +6,7 @@ function Projects(): React.JSX.Element
 {
 
     return (
-        <div className="ProjectsSection">
+        <div className="ProjectsSection" id="Projects">
             <ProjectCard 
                 classProp='ProjectCard FirstCard'
                 title = "Project One"

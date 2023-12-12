@@ -3,7 +3,7 @@ import './styles/About.css';
 function About(): React.JSX.Element
 {
     return (
-        <div className="AboutSection">
+        <div className="AboutSection" id="About">
             <div className="AboutImage">
                 <h1>IMAGE</h1>
             </div>

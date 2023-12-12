@@ -6,19 +6,19 @@ function Navbar(): React.JSX.Element
         <nav className="Navbar">
             <ul className="NavLinks">
                 <li>
-                    <a href="">Skills</a>
+                    <a href="#Skills">Skills</a>
                 </li>
                 <li>
-                    <a href="">Projects</a>
+                    <a href="#Projects">Projects</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="#About">About</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="#Contact">Contact</a>
                 </li>
-                {/* Below temporarily commented out until page is added for it */}
-                {/* <li> 
+                {/* Below temporarily commented out until page is added for it
+                 <li> 
                     <a href="">Blogs & Devlogs</a>
                 </li> */}
             </ul>

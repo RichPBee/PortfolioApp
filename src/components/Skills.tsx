@@ -9,7 +9,7 @@ function Skills(): React.JSX.Element
     const academics = ["Linear Algebra", "Calculus", "Multivariable Calculus", "Geometry", "Probability", "Classical Mechanics", "Data Analysis", "Technical Writing"];
     
     return (
-        <div className="SkillsSection">
+        <div className="SkillsSection" id="Skills">
             <div className='Subcategories'>
                 <h3>
                     Technical Skills

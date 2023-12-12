@@ -17,3 +17,8 @@
     padding-right: 2000px;
     padding: 0;
 }
+
+.NavLinks > * >* {
+    text-decoration: none;
+    color: black;
+}
