@@ -7,7 +7,7 @@ interface IListCardProps {
 
 function ListCard({classProp, title, list} : IListCardProps): React.JSX.Element{
 
-    const listItems = list.map((item) => <li>{item}</li>)
+    const listItems = list.map((item, index) => <li key={item+'-'+index}>{item}</li>)
 
     return (
         <div className={classProp}>

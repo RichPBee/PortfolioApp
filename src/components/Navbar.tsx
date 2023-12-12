@@ -17,9 +17,10 @@ function Navbar(): React.JSX.Element
                 <li>
                     <a href="">Contact</a>
                 </li>
-                <li>
+                {/* Below temporarily commented out until page is added for it */}
+                {/* <li> 
                     <a href="">Blogs & Devlogs</a>
-                </li>
+                </li> */}
             </ul>
         </nav>
     );
