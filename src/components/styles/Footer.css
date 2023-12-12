@@ -1,9 +1,15 @@
-.LinkButtons {
+.PageFooter {
+    background-color: rgb(80, 141, 80);
+    height: 6vh;
+}
+
+.FooterLinks {
     display: flex;
+    height: 100%;
     justify-content: flex-end;
 }
 
-.LinkButtons > a {
+.FooterLinks > a {
     width: 10%;
     display: flex;
     align-items: center;

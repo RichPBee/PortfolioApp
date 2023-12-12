@@ -1,20 +1,24 @@
 .HeroSection {
-    margin-top: 6%;
-    height: 100%;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75vh;
 }
 
 .HeroText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    width: 100%;
+    font-size: 30px;
 }
 
 .LinkButtons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2%;
-}
-
-.LinkButtons > * {
-    width: 20%;
-    height: 30%;
+    width: 50%;
 }
 
