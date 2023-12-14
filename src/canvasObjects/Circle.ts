@@ -40,7 +40,6 @@ export class Circle extends CanvasObject
     public draw() 
     {
         this.context.fillStyle = this.colour;
-        this.context.filter = 'blur(3px)';
         this.context.beginPath();
         this.context.arc(this.x, this.y, this.radius, 0, 2*Math.PI);
         this.context.fill();
