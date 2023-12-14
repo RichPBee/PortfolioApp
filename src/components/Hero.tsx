@@ -1,11 +1,13 @@
 import {FaGithub, FaLinkedin} from 'react-icons/fa'
 import {IoDocumentText} from 'react-icons/io5';
+import Canvas from './HeroCanvas';
 import './styles/Hero.css';
 
 function Hero(): React.JSX.Element
 {
     return (
         <div className="HeroSection PageSection">
+            <Canvas/>
             <div className="HeroText">
                 <h1>
                     Hi, My Name is Rich.
