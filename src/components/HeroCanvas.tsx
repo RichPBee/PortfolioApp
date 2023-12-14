@@ -2,18 +2,19 @@ import { useEffect, useRef } from "react";
 import { Circle } from '../canvasObjects/Circle';
 
 function Canvas() {
-    const canvasObjects: Array<Circle> = [];
+    let canvasObjects: Array<Circle> = [];
     let ctx: CanvasRenderingContext2D | null;
     let secondsPassed: number;
     let oldTimeStamp: number;
+    let animationFrameId: number;
     
     const randomPos = (type: string, ctx: CanvasRenderingContext2D): number => { 
         switch (type)
         {
             case 'x':
-                return (Math.random() * ctx.canvas.width);
+                return (Math.random() * (ctx.canvas.width - 1) + 1);
             case 'y':
-                return (Math.random() * ctx.canvas.height);
+                return (Math.random() * (ctx.canvas.height- 1) + 1);
             default: 
                 return 1;
         }
@@ -21,33 +22,41 @@ function Canvas() {
 
     const getStartColour = () => { 
         return {
-            red: Math.random() * 255,
-            green: Math.random() * 255,
-            blue: Math.random() * 255,
-            alpha: Math.random() * 0.5
+            red: (Math.random() * (150 - 80) + 80 ),
+            green: (Math.random() * (170 - 80) + 80 ),
+            blue: (Math.random() * (150 - 100) + 100 ),
+            alpha: 0.6
         }
     }
+
+    const velMult = () => Math.random() < 0.5 ? 1 : -1;
 
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     const createCircles = (ctx: CanvasRenderingContext2D) => {
-        for (let i = 0; i < 10; i++) {
+        if (canvasObjects.length > 0) {canvasObjects = []};
+        for (let i = 0; i < 14; i++) {
             let x = randomPos('x', ctx);
             let y = randomPos('y', ctx);
-            let vx = (Math.random() * 30) + 50;
-            let vy = (Math.random() * 30) + 50;
-            let radius = (Math.random() * 10) + 10;
+            let vx = (Math.random() * 40) * velMult();
+            let vy = (Math.random() * 40) * velMult();
+            let radius = (Math.random() * 10) + 5;
             let startColour = getStartColour();
-            canvasObjects.push(new Circle(ctx, x, y, vx, vy, radius, startColour));
+            const circle = new Circle(ctx, x, y, vx, vy, radius, startColour);
+            canvasObjects.push(circle);
         }
-        console.log(canvasObjects.length);
     }
 
     const draw = (ctx: CanvasRenderingContext2D | null, time: number) => { 
-        if (ctx === null) {return};
+        if (ctx == null) { 
+            window.cancelAnimationFrame(animationFrameId);    
+            return 
+        };
         canvasObjects.forEach((obj) => { 
             obj.update(time);
-            ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+        });
+        ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+        canvasObjects.forEach((obj) => { 
             obj.draw();
         });
     }
@@ -60,11 +69,14 @@ function Canvas() {
         secondsPassed = 0;
         oldTimeStamp = 0;
         createCircles(ctx);
+
+        return () => { 
+            window.cancelAnimationFrame(animationFrameId);
+        }
     }, [])
 
     useEffect(() => { 
-        let animationFrameId: number;
-        if (ctx == null) {throw new Error('Could not get context')};
+        //if (ctx == null) {throw new Error('Could not get context')};
 
         const render = (timeStamp: number) => { 
             secondsPassed = (timeStamp - oldTimeStamp) / 1000;
@@ -76,9 +88,7 @@ function Canvas() {
         
         render(secondsPassed);
 
-        return () => { 
-            window.cancelAnimationFrame(animationFrameId);
-        }
+        
     }, [draw]);
 
     return (
