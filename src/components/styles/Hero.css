@@ -27,3 +27,23 @@
     width: 50%;
 }
 
+@media (max-width: 800px) {
+    .LinkButtons {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@Media (max-height: 450px) {
+    .HeroSection {
+        height: 400px;
+    }
+}
+
+@Media (max-width: 350px) {
+    .HeroSection {
+        height: 800px;
+    }
+}
+
+

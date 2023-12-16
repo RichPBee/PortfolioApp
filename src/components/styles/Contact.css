@@ -11,8 +11,14 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    width: 50%;
+    width: 60%;
     height: 100%;
+}
+
+@Media (max-width: 800px) {
+    .ContactForm {
+        width: 80%;
+    }
 }
 
 input[name="messageTitle"], input[name="email"] {
@@ -31,4 +37,10 @@ input[name="message"]{
 
 .ContactForm > button {
     width: 30%;
+}
+
+@Media (max-height: 700px) {
+    .ContactSection {
+        height: 350px;
+    }
 }

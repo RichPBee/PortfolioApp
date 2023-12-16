@@ -10,7 +10,7 @@ interface IProjectCardProps {
 
 }
 
-function ProjectCard({classProp, id, title, buttonInfo}: IProjectCardProps) 
+function ProjectCard({classProp, title, buttonInfo}: IProjectCardProps) 
 {
 
     const buttonClick = (url: string) => { 
@@ -20,12 +20,16 @@ function ProjectCard({classProp, id, title, buttonInfo}: IProjectCardProps)
 
     return (
         <div className={classProp}>
-            <div className="ProjectCardBackground" id={id}>
-                <h1>{title}</h1>
+                <div className="ProjectCardBackground">
+                    <div className="CardText">
+                        <h1>{title}</h1>
+                        <h3>Tech used</h3>
+                        <h4>Text about</h4>
+                    </div>
+                </div>
                 <div className="CardButtons">
                     {createButtons}
                 </div>
-            </div>
         </div>
     );
 }

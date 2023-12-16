@@ -1,128 +1,187 @@
 .ProjectsSection {
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    grid-gap: 20px;
-    justify-content: center;
-    height: 75vh;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    align-self: center;
+    padding: 2%;
+    grid-gap: 2%;
+    height: 100vh;
+    width: 90%;
+    grid-template-areas: 
+    "a a b b"
+    "a a b b"
+    "a a b b"
+    "c c d d"
+    "c c d d"
+    ". e e .";
 }
 
 .ProjectCard {
-    box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
     border-radius: 15px;
-}
-
-.ProjectCardBackground {
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    height: 100%;
-}
-
-.CardButtons {
-    display: flex;
-    flex-direction: column;
-}
-
-.FirstCard {
-    grid-column: 2 / 11;
-    grid-row: 2 / 7;
-}
-
-#FirstCard {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding: 4px;
 }
 
-#FirstCard > .CardButtons {
+.ProjectCardBackground {
+    width: 100%;
+    height: 70%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 80%;
-    height: 17%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-#FirstCard > .CardButtons > * {
-    height: 100%;
-    width: 22%;
+.CardButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.CardButtons > * {
+    width: 30%;
+}
+
+.FirstCard {
+    grid-area: a;
 }
 
 .SecondCard {
-    grid-column: 2 / 5;
-    grid-row: 7 / 12;
-}
-
-#SecondCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#SecondCard > .CardButtons {
-    display: flex;
-    justify-content: space-evenly;
-    height: 40%;
-    width: 80%;
+    grid-area: b;
 }
 
 .ThirdCard {
-    grid-column: 5 / 8;
-    grid-row: 7 / 11;
+    grid-area: c;
 }
 
 .FourthCard {
-    grid-column: 8 / 11;
-    grid-row: 7 / 11;
-}
-
-#ThirdCard, #FourthCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#ThirdCard > .CardButtons, #FourthCard >.CardButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 50%;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-#ThirdCard >.CardButtons > .button-0, 
-#FourthCard > .CardButtons > .button-0 {
-    width: 80%;
-}
-
-#ThirdCard >.CardButtons > .button-1,
-#ThirdCard >.CardButtons > .button-2,
-#FourthCard >.CardButtons > .button-1,
-#FourthCard >.CardButtons > .button-2 {
-    width: 34%;
+    grid-area: d;
 }
 
 .FifthCard {
-    grid-column: 5 / 11;
-    grid-row: 11 / 12;
-    display: flex;
-    flex-direction: column;
-}
-
-#FifthCard {
-    display: flex;
+    grid-area: e;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
-#FifthCard > .CardButtons {
-    display: flex;
-    justify-content: space-evenly;
+.FifthCard > .ProjectCardBackground {
     height: 100%;
+}
+
+.FifthCard > .CardButtons {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.FifthCard > .CardButtons > * {
+    width: 60%;
+}
+
+@Media (max-width: 800px) {
+    .ProjectsSection {
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "a a a a"
+        "a a a a"
+        "b b b b"
+        "b b b b"
+        "c c c c"
+        "c c c c"
+        "d d d d"
+        "d d d d"
+        "e e e e";
+    }
+
+    .ProjectCard {
+        border: 1px solid black;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .ProjectCardBackground {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .CardText {
+        height: 100%;
+    }
+
+    .CardText > * {
+        margin: 0;
+    }
+
+    .CardButtons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .CardButtons > * {
+        width: 100px;
+        height: 50px;
+    }
+
+}
+
+@Media (max-height: 800px) {
+    .ProjectsSection {
+        height: 100%;
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "a a a a"
+        "a a a a"
+        "b b b b"
+        "b b b b"
+        "c c c c"
+        "c c c c"
+        "d d d d"
+        "d d d d"
+        "e e e e";
+    }
+
+    .ProjectCard {
+        border: 1px solid black;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .ProjectCardBackground {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .CardButtons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .CardButtons > * {
+        width: 100px;
+        height: 50px;
+    }
 }
