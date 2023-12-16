@@ -38,3 +38,9 @@ input[name="message"]{
 .ContactForm > button {
     width: 30%;
 }
+
+@Media (max-height: 700px) {
+    .ContactSection {
+        height: 350px;
+    }
+}

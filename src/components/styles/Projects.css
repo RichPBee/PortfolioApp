@@ -113,6 +113,14 @@
         align-items: center;
         text-align: center;
     }
+    
+    .CardText {
+        height: 100%;
+    }
+
+    .CardText > * {
+        margin: 0;
+    }
 
     .CardButtons {
         display: flex;
@@ -127,4 +135,53 @@
         height: 50px;
     }
 
+}
+
+@Media (max-height: 800px) {
+    .ProjectsSection {
+        height: 100%;
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "a a a a"
+        "a a a a"
+        "b b b b"
+        "b b b b"
+        "c c c c"
+        "c c c c"
+        "d d d d"
+        "d d d d"
+        "e e e e";
+    }
+
+    .ProjectCard {
+        border: 1px solid black;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .ProjectCardBackground {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .CardButtons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .CardButtons > * {
+        width: 100px;
+        height: 50px;
+    }
 }

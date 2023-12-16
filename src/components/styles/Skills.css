@@ -64,3 +64,15 @@
     text-align: center;
     line-height: 25px;
 }
+
+@Media (max-height: 800px) {
+    .SkillsSection {
+        height: 100% !important;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .SkillCard {
+        height: 300px;
+    }
+}
