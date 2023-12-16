@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Circle } from '../canvasObjects/Circle';
 
 function Canvas() {
@@ -25,7 +25,7 @@ function Canvas() {
             red: (Math.random() * (150 - 80) + 80 ),
             green: (Math.random() * (170 - 80) + 80 ),
             blue: (Math.random() * (150 - 100) + 100 ),
-            alpha: 0.6
+            alpha: 0.3
         }
     }
 
@@ -35,12 +35,12 @@ function Canvas() {
 
     const createCircles = (ctx: CanvasRenderingContext2D) => {
         if (canvasObjects.length > 0) {canvasObjects = []};
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < 30; i++) {
             let x = randomPos('x', ctx);
             let y = randomPos('y', ctx);
-            let vx = (Math.random() * 40) * velMult();
-            let vy = (Math.random() * 40) * velMult();
-            let radius = (Math.random() * 10) + 5;
+            let radius = (Math.random() * 30) + 4;
+            let vx = ((Math.random() * (700 - 20) + 20) * velMult())/radius;
+            let vy = ((Math.random() * (700 - 20) + 20) * velMult())/radius;
             let startColour = getStartColour();
             const circle = new Circle(ctx, x, y, vx, vy, radius, startColour);
             canvasObjects.push(circle);
@@ -52,6 +52,8 @@ function Canvas() {
             window.cancelAnimationFrame(animationFrameId);    
             return 
         };
+        ctx.canvas.width = window.innerWidth;
+        ctx.canvas.height = window.innerHeight;
         canvasObjects.forEach((obj) => { 
             obj.update(time);
         });
@@ -60,6 +62,8 @@ function Canvas() {
             obj.draw();
         });
     }
+    
+    const [seconds, setSeconds] = useState(0);
 
     useEffect(() => { 
         const canvas = canvasRef.current;
@@ -73,6 +77,18 @@ function Canvas() {
         return () => { 
             window.cancelAnimationFrame(animationFrameId);
         }
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (ctx == null) return;
+            draw(ctx, seconds);
+        }
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
     }, [])
 
     useEffect(() => { 
@@ -82,6 +98,7 @@ function Canvas() {
             secondsPassed = (timeStamp - oldTimeStamp) / 1000;
             oldTimeStamp = timeStamp;
             secondsPassed = Math.min(secondsPassed, 0.1);
+            setSeconds(secondsPassed);
             draw(ctx, secondsPassed);
             animationFrameId = window.requestAnimationFrame(render);
         };
@@ -92,7 +109,7 @@ function Canvas() {
     }, [draw]);
 
     return (
-        <canvas className="HeroCanvas" ref={canvasRef} />
+        <canvas width="100vw" height="100vh" className="HeroCanvas" ref={canvasRef} />
     )
 }
 
