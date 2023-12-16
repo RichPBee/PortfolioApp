@@ -10,7 +10,7 @@ function Hero(): React.JSX.Element
             <Canvas/>
             <div className="HeroText">
                 <h1>
-                    Hi, My Name is Rich.
+                    Hi, My name is Rich.
                 </h1>
                 <h4>
                     I'm a developer with experience in front-end applications
