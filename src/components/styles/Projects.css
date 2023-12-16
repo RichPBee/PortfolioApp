@@ -4,7 +4,7 @@
     grid-template-rows: repeat(12, 1fr);
     grid-gap: 20px;
     justify-content: center;
-    height: 75vh;
+    height: 100vh;
 }
 
 .ProjectCard {

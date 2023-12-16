@@ -27,3 +27,11 @@
     width: 50%;
 }
 
+@media (max-width: 800px) {
+    .LinkButtons {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+

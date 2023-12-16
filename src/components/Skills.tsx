@@ -14,31 +14,35 @@ function Skills(): React.JSX.Element
                 <h3>
                     Technical Skills
                 </h3>
+                <div className="SkillCards">
+                    <ListCard
+                        classProp="SkillCard"
+                        title = "Languages & Frameworks"
+                        list = {languages}
+                    />
+                    <ListCard
+                        classProp="SkillCard"
+                        title = "Tools"
+                        list = {toolList}
+                    />
+                </div>
+            </div>
+            <div className="Subcategories">
                 <h3>
                     Other Skills
                 </h3>
-            </div>
-            <div className="SkillCards">
-                <ListCard
-                    classProp="SkillCard"
-                    title = "Languages & Frameworks"
-                    list = {languages}
-                />
-                <ListCard 
-                    classProp="SkillCard"
-                    title = "Tools"
-                    list = {toolList}
-                />
-                <ListCard 
-                    classProp="SkillCard"
-                    title = "Software"
-                    list = {softwareList}
-                />
-                <ListCard 
-                    classProp="SkillCard"
-                    title = "Academic"
-                    list = {academics}
-                />
+                <div className="SkillCards">
+                    <ListCard 
+                        classProp="SkillCard"
+                        title = "Software"
+                        list = {softwareList}
+                    />
+                    <ListCard 
+                        classProp="SkillCard"
+                        title = "Academic"
+                        list = {academics}
+                    />
+                </div>
             </div>
         </div>
     )
