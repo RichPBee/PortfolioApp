@@ -12,6 +12,8 @@ export class Circle extends CanvasObject
     protected radius: number;
     protected colour: string;
     protected bounds: Bounds;
+    protected inXBounds: boolean = true;
+    protected inYBounds: boolean = true;
     constructor(
         context: CanvasRenderingContext2D, 
         x: number, 
@@ -47,18 +49,23 @@ export class Circle extends CanvasObject
 
     public update(time: number) 
     {
+        if (this.x <= this.context.canvas.width) {this.inXBounds = true};
+        if (this.y <= this.context.canvas.height) {this.inYBounds = true};
         this.x += this.vx * time;
         this.y += this.vy * time;
         const xMaxBound = (this.x + this.radius);
         const yMaxBound = (this.y + this.radius);
         const xMinBound = (this.x - this.radius);
         const yMinBound = (this.y - this.radius);
-        if (xMaxBound >= (this.bounds.maxX) || xMinBound <= (this.bounds.minXY) )
+        this.calcBounds();
+        if ((xMaxBound >= (this.bounds.maxX) || xMinBound <= (this.bounds.minXY)) && this.inXBounds )
         {
+            this.inXBounds = false;
             this.vx *= -1;
         }
-        if (yMaxBound >= (this.bounds.maxX) + 50 || yMinBound <= (this.bounds.minXY))
+        if ((yMaxBound >= (this.bounds.maxY) || yMinBound <= (this.bounds.minXY)) && this.inYBounds)
         {
+            this.inYBounds = false;
             this.vy *= -1;
         }
     };
@@ -66,5 +73,13 @@ export class Circle extends CanvasObject
     protected randomIncrement()
     {
         return (Math.random() < 0.5 ? -1 : 1);
+    };
+
+    protected calcBounds() {
+        this.bounds = {
+            minXY: 0 - this.radius * 2,
+            maxX: this.context.canvas.width + this.radius * 2,
+            maxY: this.context.canvas.height + this.radius * 2
+        }
     }
 }

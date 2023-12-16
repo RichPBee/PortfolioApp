@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Circle } from '../canvasObjects/Circle';
 
 function Canvas() {
@@ -52,6 +52,8 @@ function Canvas() {
             window.cancelAnimationFrame(animationFrameId);    
             return 
         };
+        ctx.canvas.width = window.innerWidth;
+        ctx.canvas.height = window.innerHeight;
         canvasObjects.forEach((obj) => { 
             obj.update(time);
         });
@@ -60,6 +62,8 @@ function Canvas() {
             obj.draw();
         });
     }
+    
+    const [seconds, setSeconds] = useState(0);
 
     useEffect(() => { 
         const canvas = canvasRef.current;
@@ -73,6 +77,18 @@ function Canvas() {
         return () => { 
             window.cancelAnimationFrame(animationFrameId);
         }
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (ctx == null) return;
+            draw(ctx, seconds);
+        }
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
     }, [])
 
     useEffect(() => { 
@@ -82,11 +98,7 @@ function Canvas() {
             secondsPassed = (timeStamp - oldTimeStamp) / 1000;
             oldTimeStamp = timeStamp;
             secondsPassed = Math.min(secondsPassed, 0.1);
-            if (ctx != null) {
-                ctx.canvas.width = ctx.canvas.clientWidth;
-                ctx.canvas.height = ctx.canvas.clientHeight;
-            }
-
+            setSeconds(secondsPassed);
             draw(ctx, secondsPassed);
             animationFrameId = window.requestAnimationFrame(render);
         };
