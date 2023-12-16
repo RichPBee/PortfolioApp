@@ -16,13 +16,31 @@
 }
 
 .AboutText > button {
-    width: 30%;
+    width: 40%;
 }
 .AboutImage {
-    width: 400px;
+    width: 45vw;
     display: flex;
     justify-content: center;
     background-color: white;
-    height: 400px;
+    height: 45vw;
     border-radius: 50%;
+}
+
+@Media (max-width: 550px ) 
+{
+    .AboutSection {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .AboutText {
+        text-align: center;
+        height: 30%;
+        width: 80%;
+    }
+
+    .AboutText > button {
+        width: 60%;
+    }
 }
