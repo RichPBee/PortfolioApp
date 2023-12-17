@@ -32,7 +32,6 @@ function Canvas() {
     const velMult = () => Math.random() < 0.5 ? 1 : -1;
 
     const canvasRef = useRef<HTMLCanvasElement>(null);
-
     const createCircles = (ctx: CanvasRenderingContext2D) => {
         if (canvasObjects.length > 0) {canvasObjects = []};
         for (let i = 0; i < 30; i++) {
@@ -42,22 +41,41 @@ function Canvas() {
             let vx = ((Math.random() * (700 - 20) + 20) * velMult())/radius;
             let vy = ((Math.random() * (700 - 20) + 20) * velMult())/radius;
             let startColour = getStartColour();
-            const circle = new Circle(ctx, x, y, vx, vy, radius, startColour);
+            const circle = new Circle(ctx, x, y, vx, vy, radius, startColour, i);
             canvasObjects.push(circle);
         }
     }
 
-    const draw = (ctx: CanvasRenderingContext2D | null, time: number) => { 
+    const addCircles = (ctx: CanvasRenderingContext2D, amount: number) => {
+        for (let i = 0; i < amount; i++) {
+            let x = randomPos('x', ctx);
+            let y = randomPos('y', ctx);
+            let radius = (Math.random() * 30) + 4;
+            let vx = ((Math.random() * (700 - 20) + 20) * velMult())/radius;
+            let vy = ((Math.random() * (700 - 20) + 20) * velMult())/radius;
+            let startColour = getStartColour();
+            const circle = new Circle(ctx, x, y, vx, vy, radius, startColour, i);
+            canvasObjects.push(circle);
+        }
+    }
+
+    const draw = (ctx: CanvasRenderingContext2D | null, time: number) => {
         if (ctx == null) { 
             window.cancelAnimationFrame(animationFrameId);    
-            return 
+            return;
         };
+        if (canvasObjects.length < 15)
+        {
+            const amount = (Math.random() * (35 - canvasObjects.length) + canvasObjects.length)
+            addCircles(ctx, amount);   
+        }
         if (window.innerHeight !== ctx.canvas.height || window.innerWidth !== ctx.canvas.width)
         {
             ctx.canvas.width = window.innerWidth;
             ctx.canvas.height = window.innerHeight;
         }
-        canvasObjects.forEach((obj) => { 
+        canvasObjects = canvasObjects.filter((obj) => !obj.shouldDelete);
+        canvasObjects.forEach((obj) => {
             obj.update(time);
         });
         ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);

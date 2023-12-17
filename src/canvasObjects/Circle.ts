@@ -8,7 +8,8 @@ interface Bounds {
 
 export class Circle extends CanvasObject
 {
-
+    public shouldDelete: boolean;
+    public index: number;
     protected radius: number;
     protected colour: string;
     protected bounds: Bounds;
@@ -26,7 +27,9 @@ export class Circle extends CanvasObject
             green: number,
             blue: number,
             alpha: number
-        })
+        },
+        index: number
+        )
     {
         super(context, x, y, vx, vy);
 
@@ -37,10 +40,13 @@ export class Circle extends CanvasObject
             maxX: this.context.canvas.width + this.radius * 2,
             maxY: this.context.canvas.height + this.radius * 2
         }
+        this.shouldDelete = false;
+        this.index = index;
     };
     
     public draw() 
     {
+        if (this.shouldDelete) {return};
         this.context.fillStyle = this.colour;
         this.context.beginPath();
         this.context.arc(this.x, this.y, this.radius, 0, 2*Math.PI);
@@ -49,8 +55,17 @@ export class Circle extends CanvasObject
 
     public update(time: number) 
     {
-        if (this.x <= this.context.canvas.width) {this.inXBounds = true};
-        if (this.y <= this.context.canvas.height) {this.inYBounds = true};
+        if ((this.x < -40 && this.vx < 0 )|| (this.x > (this.context.canvas.width + 40) && this.vx > 0))
+        {
+            this.shouldDelete = true;
+        }
+        if ((this.y < -40 && this.vy < 0 )|| (this.y > (this.context.canvas.height + 40) && this.vy > 0))
+        {
+            this.shouldDelete = true;
+        }
+        if (this.shouldDelete) { return; };
+        if (this.x <= this.context.canvas.width && this.x > 0) {this.inXBounds = true};
+        if (this.y <= this.context.canvas.height && this.x > 0) {this.inYBounds = true};
         this.x += this.vx * time;
         this.y += this.vy * time;
         const xMaxBound = (this.x + this.radius);
