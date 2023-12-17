@@ -81,8 +81,6 @@ function Canvas() {
     }, []);
 
     useEffect(() => { 
-        //if (ctx == null) {throw new Error('Could not get context')};
-
         const render = (timeStamp: number) => { 
             secondsPassed = (timeStamp - oldTimeStamp) / 1000;
             oldTimeStamp = timeStamp;

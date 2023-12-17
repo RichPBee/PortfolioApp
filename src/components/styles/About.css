@@ -34,6 +34,11 @@
         justify-content: space-evenly;
     }
 
+    .AboutImage {
+        width: 225px;
+        height: 225px;
+    }
+
     .AboutText {
         text-align: center;
         height: 30%;
