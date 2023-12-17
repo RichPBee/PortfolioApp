@@ -25,6 +25,7 @@
 
 .AboutText > button:hover {
     box-shadow: 0 0 2px 2px beige;
+    scale: 1.05;
 }
 
 .AboutImage {
@@ -78,6 +79,6 @@
     }
 
     .AboutText > button {
-        width: 60%;
+        width: 40%;
     }
 }
