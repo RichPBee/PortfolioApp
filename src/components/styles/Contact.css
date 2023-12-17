@@ -19,12 +19,6 @@
     background-color: rgba(175, 212, 188, 0.3);
 }
 
-@Media (max-width: 800px) {
-    .ContactForm {
-        width: 80%;
-    }
-}
-
 input[name="messageTitle"], input[name="email"] {
     border: none;
     border-radius: 8px;
@@ -47,8 +41,19 @@ input[name="message"]{
     border-radius: 8px;
 }
 
+.ContactForm > button:hover {
+    scale: 1.02;
+    box-shadow: 0 0 2px 2px rgba(175, 212, 188, 0.3);
+}
+
 @Media (max-height: 700px) {
     .ContactSection {
         height: 350px;
+    }
+}
+
+@Media (max-width: 800px) {
+    .ContactForm {
+        width: 80%;
     }
 }

@@ -20,10 +20,16 @@
     padding: 0;
 }
 
+
 .NavLinks > * >* {
     text-decoration: none;
     color: black;
     font-size: 20px;
+    font-weight: 600;
+}
+
+.NavLinks > * > *:hover {
+    border-bottom: 3px solid black;
 }
 
 @Media (max-width: 700px ) 
