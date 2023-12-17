@@ -39,10 +39,13 @@
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    align-items: center;
+    height: 40%;;
 }
 
 .CardButtons > * {
     width: 30%;
+    height: 40px;
 }
 
 .FirstCard {
@@ -77,7 +80,7 @@
 }
 
 .FifthCard > .CardButtons > * {
-    width: 60%;
+    width: 70%;
 }
 
 @Media (max-width: 800px) {
@@ -118,8 +121,12 @@
         height: 100%;
     }
 
+    .CardText > h1 {
+        font-size: 30px;
+    }
+
     .CardText > * {
-        margin: 0;
+        margin: 5px;
     }
 
     .CardButtons {
@@ -128,13 +135,34 @@
         justify-content: space-evenly;
         align-items: center;
         height: 100%;
+        width: 40%;
     }
     
     .CardButtons > * {
         width: 100px;
-        height: 50px;
+        height: 25px;
+        font-size: 12px;
     }
 
+    .FifthCard > .CardButtons > * {
+        width: 90px;
+    }
+    
+}
+
+@Media (max-width: 500px) 
+{
+    .CardText > h1 {
+        font-size: 20px;
+    }
+
+    .CardText > h3 {
+        font-size: 15px;;
+    }
+
+    .CardText > h4 {
+        font-size: 12px;;
+    }
 }
 
 @Media (max-height: 800px) {
@@ -178,10 +206,12 @@
         justify-content: space-evenly;
         align-items: center;
         height: 100%;
+        width: 40%;
     }
     
     .CardButtons > * {
-        width: 100px;
-        height: 50px;
+        width: 70%;
+        height: 25px;
+        font-size: 100%;
     }
 }
