@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Circle } from '../canvasObjects/Circle';
 
 function Canvas() {
@@ -64,9 +64,9 @@ function Canvas() {
             window.cancelAnimationFrame(animationFrameId);    
             return;
         };
-        if (canvasObjects.length < 15)
+        if (canvasObjects.length < 30)
         {
-            const amount = (Math.random() * (35 - canvasObjects.length) + canvasObjects.length)
+            const amount = (30 - canvasObjects.length);
             addCircles(ctx, amount);   
         }
         if (window.innerHeight !== ctx.canvas.height || window.innerWidth !== ctx.canvas.width)
