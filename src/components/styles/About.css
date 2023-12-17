@@ -3,7 +3,7 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: rgb(175, 212, 188);
-    height: 50vh;
+    height: 60vh;
 }
 
 .AboutText {
@@ -79,6 +79,6 @@
     }
 
     .AboutText > button {
-        width: 40%;
+        width: 50%;
     }
 }

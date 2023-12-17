@@ -72,6 +72,10 @@
 }
 
 @Media (max-width: 400px) {
+    .SkillsSection {
+        height: 800px !important;
+    }
+
     .SkillCard {
         font-size: 12px;
     }
