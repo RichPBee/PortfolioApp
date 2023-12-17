@@ -17,13 +17,13 @@
 }
 
 .ProjectCard {
-    border: 1px solid black;
-    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 4px;
+    padding: 8px;
+    background-color: rgba(175, 212, 188, 0.5);
+    border-radius: 15px;
 }
 
 .ProjectCardBackground {
@@ -33,6 +33,9 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: rgb(255, 255, 236);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .CardButtons {
@@ -40,12 +43,16 @@
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    height: 40%;;
+    height: 40%;
+    
 }
 
 .CardButtons > * {
     width: 30%;
     height: 40px;
+    background-color: rgb(255, 255, 236);
+    border: 0;
+    border-radius: 7px;
 }
 
 .FirstCard {
@@ -71,6 +78,9 @@
 
 .FifthCard > .ProjectCardBackground {
     height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .FifthCard > .CardButtons {
@@ -100,7 +110,6 @@
     }
 
     .ProjectCard {
-        border: 1px solid black;
         border-radius: 15px;
         display: flex;
         flex-direction: row;
@@ -115,6 +124,8 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
     }
     
     .CardText {

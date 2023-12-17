@@ -18,13 +18,13 @@ function Hero(): React.JSX.Element
                 </h4>
                 <div className="LinkButtons">
                     <a href="" target="_blank">
-                        <IoDocumentText size={100}/>
+                        <IoDocumentText size={100} color="rgb(175, 212, 188)"/>
                     </a>
                     <a href="https://github.com/RichPBee" target="_blank">
-                        <FaGithub size={100} />
+                        <FaGithub size={100} color="rgb(175, 212, 188)"/>
                     </a>
                     <a href="https://www.linkedin.com/in/rich-balfourth-16a54324b/" target="_blank">
-                        <FaLinkedin size={100} />
+                        <FaLinkedin size={100} color="rgb(175, 212, 188)"/>
                     </a>
                 </div>
             </div>

@@ -16,8 +16,17 @@
 }
 
 .AboutText > button {
-    width: 40%;
+    width: 60%;
+    height: 15%;
+    background-color: rgb(255, 255, 236);
+    border: 0;
+    border-radius: 8px;
 }
+
+.AboutText > button:hover {
+    box-shadow: 0 0 2px 2px beige;
+}
+
 .AboutImage {
     width: 300px;
     height: 300px;

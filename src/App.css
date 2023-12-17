@@ -10,3 +10,7 @@
     bottom: 15px;
     left: 15px;
 }
+
+.ScrollToTop > a > *:hover {
+    scale: 1.1;
+}

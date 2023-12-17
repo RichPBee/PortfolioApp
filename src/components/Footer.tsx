@@ -8,13 +8,13 @@ function Footer(): React.JSX.Element
         <footer className="PageFooter">
             <div className="FooterLinks">
                     <a href="" target="_blank">
-                        <IoDocumentText size={40}/>
+                        <IoDocumentText size={40} color="rgba(255, 255, 236, 0.9)"/>
                     </a>
                     <a href="https://github.com/RichPBee" target="_blank">
-                        <FaGithub size={40} />
+                        <FaGithub size={40}  color="rgba(255, 255, 236, 0.9)"/>
                     </a>
                     <a href="https://www.linkedin.com/in/rich-balfourth-16a54324b/" target="_blank">
-                        <FaLinkedin size={40} />
+                        <FaLinkedin size={40} color="rgba(255, 255, 236, 0.9)"/>
                     </a>
                 </div>
         </footer>

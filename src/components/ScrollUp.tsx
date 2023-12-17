@@ -9,7 +9,7 @@ function ScrollUp()
     return (
         <div className="ScrollToTop">
             <a href="" onClick={handleScrollUp}>
-                <FaArrowAltCircleUp size={40}/>
+                <FaArrowAltCircleUp size={40} color="black"/>
             </a>
         </div>
     );
