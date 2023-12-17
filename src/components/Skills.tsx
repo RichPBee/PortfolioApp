@@ -39,7 +39,7 @@ function Skills(): React.JSX.Element
                     />
                     <ListCard 
                         classProp="SkillCard"
-                        title = "Academic"
+                        title = "Mathematics"
                         list = {academics}
                     />
                 </div>
