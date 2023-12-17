@@ -52,8 +52,11 @@ function Canvas() {
             window.cancelAnimationFrame(animationFrameId);    
             return 
         };
-        ctx.canvas.width = window.innerWidth;
-        ctx.canvas.height = window.innerHeight;
+        if (window.innerHeight !== ctx.canvas.height || window.innerWidth !== ctx.canvas.width)
+        {
+            ctx.canvas.width = window.innerWidth;
+            ctx.canvas.height = window.innerHeight;
+        }
         canvasObjects.forEach((obj) => { 
             obj.update(time);
         });
@@ -63,8 +66,6 @@ function Canvas() {
         });
     }
     
-    const [seconds, setSeconds] = useState(0);
-
     useEffect(() => { 
         const canvas = canvasRef.current;
         if (canvas == null) return;
@@ -79,18 +80,6 @@ function Canvas() {
         }
     }, []);
 
-    useEffect(() => {
-        const handleResize = () => {
-            if (ctx == null) return;
-            draw(ctx, seconds);
-        }
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        }
-    }, [])
-
     useEffect(() => { 
         //if (ctx == null) {throw new Error('Could not get context')};
 
@@ -98,7 +87,6 @@ function Canvas() {
             secondsPassed = (timeStamp - oldTimeStamp) / 1000;
             oldTimeStamp = timeStamp;
             secondsPassed = Math.min(secondsPassed, 0.1);
-            setSeconds(secondsPassed);
             draw(ctx, secondsPassed);
             animationFrameId = window.requestAnimationFrame(render);
         };
