@@ -119,7 +119,7 @@ input[name="title"], input[name="email"], input[name="name"]{
 
 @Media (max-width: 800px) {
     .ContactForm {
-        width: 80%;
+        width: 85%;
     }
 
     .alert {
