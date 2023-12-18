@@ -17,9 +17,11 @@
 
 .ContactForm > input {
     background-color: rgba(175, 212, 188, 0.3);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-input[name="messageTitle"], input[name="email"] {
+input[name="title"], input[name="email"], input[name="name"]{
     border: none;
     border-radius: 8px;
     height: 8%;
