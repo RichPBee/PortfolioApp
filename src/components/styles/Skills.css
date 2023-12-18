@@ -13,6 +13,10 @@
     height: 100%;
 }
 
+.Subcategories > h3 {
+    font-size: 30px;
+}
+
 .SkillCards {
     display: flex;
     justify-content: space-around;
@@ -21,7 +25,7 @@
 }
 
 .SkillCard {
-    width: 40%;
+    width: 45%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -29,6 +33,7 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
+    font-size: 1.4em;
 }
 
 .SkillCard > h4 {
@@ -49,7 +54,11 @@
     min-height: 100%;
     padding: 0;
     text-align: center;
-    line-height: 25px;
+    margin-top: 20px;
+}
+
+.SkillCard > ul > li {
+    line-height: 1.2;
 }
 
 @Media (max-height: 800px) {
@@ -64,10 +73,20 @@
     }
 }
 
-@Media (max-width: 800px) {
+@Media (max-width: 1100px) {
     .SkillsSection {
         flex-direction: column;
         height: 100vh !important;
+    }
+
+    .SkillCard {
+        font-size: 1.4em;
+    }
+}
+
+@Media (max-width: 800px) {
+    .Subcategories > h3 {
+        font-size: 25px;
     }
 }
 
@@ -78,5 +97,9 @@
 
     .SkillCard {
         font-size: 12px;
+    }
+
+    .SkillCard > ul > li{
+        line-height: 2;
     }
 }
