@@ -25,7 +25,7 @@ function ProjectCard({classProp, title, techStack, aboutText, buttonInfo}: IProj
                 <div className="ProjectCardBackground">
                     <div className="CardText">
                         <h1>{title}</h1>
-                        <h3>Tech used: {techStack}</h3>
+                        <h3>Tech: {techStack}</h3>
                         <h4>{aboutText}</h4>
                     </div>
                 </div>

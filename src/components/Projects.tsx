@@ -10,43 +10,43 @@ function Projects(): React.JSX.Element
             <ProjectCard 
                 classProp='ProjectCard FirstCard'
                 id="FirstCard"
-                title = "Project One"
-                techStack =  "Various technologies"
-                aboutText = "someTextAbout"
+                title = "Invaders Takeover"
+                techStack =  "TypeScript, PIXI"
+                aboutText = "Casino slots game developed using an internally developed PIXIjs based framework. In particular, I developed the planet selector transition, implemented bug fixes and various elements across UI, sound and animation."
                 buttonInfo={cardButtonSettings.projectOne}
             />
             <ProjectCard 
                 classProp="ProjectCard SecondCard"
                 id="SecondCard"
-                title="Project Two"
-                techStack =  "Various technologies"
-                aboutText = "someTextAbout"
+                title="Redule"
+                techStack =  "TypeScript, NodeJS, ElectronJS, Webpack, Snoowrap Reddit API"
+                aboutText = "ElectronJS desktop app that uses the reddit API to schedule posts and publish them using node-cron."
                 buttonInfo={cardButtonSettings.projectTwo}
             />
             <ProjectCard 
                 classProp="ProjectCard ThirdCard"
                 id="ThirdCard"
-                title="Project Three"
-                techStack =  "Various technologies"
-                aboutText = "someTextAbout"
+                title="Sympl"
+                techStack =  "TypeScript"
+                aboutText = "A simple (ha) modular component based library for builing web pages. Uses a view controller to switch between pages, and a re-usable component design."
                 buttonInfo={cardButtonSettings.projectThree}
             />
             <ProjectCard 
                 classProp="ProjectCard FourthCard"
                 id="FourthCard"
-                title="Project Four"
-                techStack =  "Various technologies"
-                aboutText = "someTextAbout"
+                title="This Website"
+                techStack =  "React, TypeScript, Vite"
+                aboutText = ""
                 buttonInfo={cardButtonSettings.projectFour}
             />
-            <ProjectCard 
+            {/* <ProjectCard 
                 classProp="ProjectCard FifthCard"
                 id="FifthCard"
                 title="This Website"
                 techStack =  "Various technologies"
                 aboutText = "someTextAbout"
                 buttonInfo={cardButtonSettings.projectFive}
-            />
+            /> */}
         </div>
     )
 }

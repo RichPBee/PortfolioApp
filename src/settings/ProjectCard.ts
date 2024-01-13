@@ -2,58 +2,26 @@ export const cardButtonSettings = {
     projectOne: [
         {
             text: 'Live Demo',
-            url: 'https://www.Github.com/RichPBee'
+            url: 'https://igaming.lnw.com/games/invaders-takeover/'
         },
-        {
-            text: 'Source Code',
-            url: 'google.com'
-        },
-        {
-            text: 'More Info',
-            url: ''
-        }
     ],
     projectTwo: [
         {
-            text: 'Live Demo',
-            url: 'https://www.Github.com/RichPBee'
-        },
-        {
             text: 'Source Code',
-            url: 'google.com'
+            url: 'https://github.com/RichPBee/reddit_post_scheduler'
         },
-        {
-            text: 'More Info',
-            url: ''
-        }
     ],
     projectThree: [
         {
-            text: 'Live Demo',
-            url: 'https://www.Github.com/RichPBee'
-        },
-        {
             text: 'Source Code',
-            url: 'google.com'
+            url: 'https://github.com/RichPBee/Sympl'
         },
-        {
-            text: 'More Info',
-            url: ''
-        }
     ],
     projectFour: [
         {
-            text: 'Live Demo',
-            url: 'https://www.Github.com/RichPBee'
-        },
-        {
             text: 'Source Code',
-            url: 'google.com'
+            url: 'https://github.com/RichPBee/PortfolioApp'
         },
-        {
-            text: 'More Info',
-            url: ''
-        }
     ],
     projectFive: [
         {

@@ -17,9 +17,9 @@ function Hero(): React.JSX.Element
                     and HTML5 game development.
                 </h4>
                 <div className="LinkButtons">
-                    <a href="" target="_blank">
+                    {/* <a href="" target="_blank">
                         <IoDocumentText size={100} color="rgb(175, 212, 188)"/>
-                    </a>
+                    </a> */}
                     <a href="https://github.com/RichPBee" target="_blank">
                         <FaGithub size={100} color="rgb(175, 212, 188)"/>
                     </a>
