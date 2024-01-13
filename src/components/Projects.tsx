@@ -28,7 +28,7 @@ function Projects(): React.JSX.Element
                 id="ThirdCard"
                 title="Sympl"
                 techStack =  "TypeScript"
-                aboutText = "A basic modular component based library for builing web pages. Uses a view controller to switch between pages, and a re-usable component design."
+                aboutText = "A basic modular framework for builing web pages. Uses a view controller to switch between pages, and a re-usable component design."
                 buttonInfo={cardButtonSettings.projectThree}
             />
             <ProjectCard 
