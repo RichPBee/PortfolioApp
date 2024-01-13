@@ -64,7 +64,7 @@ function Contact(): React.JSX.Element
     return (
     <div className="ContactSection PageSection" id="Contact">
         <h1>
-            Contact Me!
+            Contact Me
         </h1>
         <form action="POST" className="ContactForm" onSubmit={handleSubmit(onSubmit)}>
             <div className='FormSection'>

@@ -1,5 +1,5 @@
 import {FaGithub, FaLinkedin} from 'react-icons/fa'
-import {IoDocumentText} from 'react-icons/io5';
+// import {IoDocumentText} from 'react-icons/io5';
 import Canvas from './HeroCanvas';
 import './styles/Hero.css';
 
@@ -10,21 +10,20 @@ function Hero(): React.JSX.Element
             <Canvas/>
             <div className="HeroText">
                 <h1>
-                    Hi, my name is Rich.
+                    Rich Balfourth
                 </h1>
                 <h4>
-                    I'm a developer with experience in front-end applications
-                    and HTML5 game development.
+                    Hi, my name's Rich. I'm a developer with experience building web apps and HTML5 games.
                 </h4>
                 <div className="LinkButtons">
                     {/* <a href="" target="_blank">
                         <IoDocumentText size={100} color="rgb(175, 212, 188)"/>
                     </a> */}
                     <a href="https://github.com/RichPBee" target="_blank">
-                        <FaGithub size={100} color="rgb(175, 212, 188)"/>
+                        <FaGithub size={100} color="rgb(76, 97, 76)"/>
                     </a>
                     <a href="https://www.linkedin.com/in/rich-balfourth-16a54324b/" target="_blank">
-                        <FaLinkedin size={100} color="rgb(175, 212, 188)"/>
+                        <FaLinkedin size={100} color="rgb(76, 97, 76)"/>
                     </a>
                 </div>
             </div>

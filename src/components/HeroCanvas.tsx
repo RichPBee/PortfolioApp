@@ -22,10 +22,13 @@ function Canvas() {
 
     const getStartColour = () => { 
         return {
-            red: (Math.random() * (150 - 80) + 80 ),
-            green: (Math.random() * (170 - 80) + 80 ),
-            blue: (Math.random() * (150 - 100) + 100 ),
-            alpha: 0.3
+            // red: (Math.random() * (150 - 80) + 80 ),
+            // green: (Math.random() * (170 - 80) + 80 ),
+            // blue: (Math.random() * (150 - 100) + 100 ),
+            red: (Math.random() * (80 - 65) + 65),
+            green: (Math.random() * (100 - 80) + 80),
+            blue: (Math.random() * (80 - 65) + 65), 
+            alpha: (Math.random() * 0.5) + 0.2
         }
     }
 

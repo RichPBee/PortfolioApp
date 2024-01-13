@@ -1,5 +1,5 @@
 .PageFooter {
-    background-color: rgb(80, 141, 80);
+    background-color: rgb(76, 97, 76);
     height: 50px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .FooterLinks > a:hover {
-    box-shadow: 0 0 0px 4px rgb(80, 141, 80);
+    box-shadow: 0 0 0px 4px rgb(76, 97, 76);
     translate: translate(0px, 20px);
 }
 

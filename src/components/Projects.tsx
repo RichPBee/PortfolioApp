@@ -12,7 +12,7 @@ function Projects(): React.JSX.Element
                 id="FirstCard"
                 title = "Invaders Takeover"
                 techStack =  "TypeScript, PIXI"
-                aboutText = "Casino slots game developed using an internally developed PIXIjs based framework. In particular, I developed the planet selector transition, implemented bug fixes and various elements across UI, sound and animation."
+                aboutText = "Casino slots game developed at Light & Wonder using an internally developed PIXI.js based framework. In particular, I developed the planet selector transition, implemented bug fixes and various elements across UI, sound and animation."
                 buttonInfo={cardButtonSettings.projectOne}
             />
             <ProjectCard 
@@ -34,9 +34,8 @@ function Projects(): React.JSX.Element
             <ProjectCard 
                 classProp="ProjectCard FourthCard"
                 id="FourthCard"
-                title="This Website"
+                title="This Site"
                 techStack =  "React, TypeScript, Vite"
-                aboutText = ""
                 buttonInfo={cardButtonSettings.projectFour}
             />
             {/* <ProjectCard 

@@ -3,8 +3,8 @@ import './styles/Navbar.css';
 function Navbar(): React.JSX.Element
 {
     return (
-        <nav className="Navbar">
-            <ul className="NavLinks">
+        <nav className={window.scrollY > 175 ? 'Navbar NavbarBG' : 'Navbar'}>
+            <ul className={window.scrollY > 175 ? 'NavLinks NavLinksBG' : 'NavLinks'}>
                 <li>
                     <a href="#Skills">Skills</a>
                 </li>

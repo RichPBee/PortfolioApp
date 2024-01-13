@@ -41,6 +41,10 @@
     scale: 1.1;
 }
 
+.LinkButtons > a > *:hover {
+    color: rgb(46, 58, 46)!important;
+}
+
 @media (max-width: 800px) {
     .LinkButtons {
         width: 100%;
