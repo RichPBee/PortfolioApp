@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(76, 97, 76);
-    height: 40vh;
+    height: 50vh;
 }
 
 .AboutText {
@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-size: 1em;
+    font-size: 1.2em;
     color: white;
 }
 
@@ -39,13 +39,14 @@
     border-radius: 50%;
 }
 
-@Media (max-width: 550px ) 
-{
-    .AboutSection {
-        flex-direction: column;
-        justify-content: space-evenly;
+@media (max-width: 800px) {
+    .AboutText {
+        font-size: 1.1em;
     }
+}
 
+@Media (max-width: 600px ) 
+{
     .AboutImage {
         width: 225px;
         height: 225px;
@@ -54,11 +55,17 @@
     .AboutText {
         height: 30%;
         width: 95%;
-        font-size: 0.75em;
+        font-size: 1.0em;
     }
 
     .AboutText > button {
         width: 60%;
+    }
+}
+
+@Media (max-width: 450px) {
+    .AboutText {
+        font-size: 0.8em;
     }
 }
 

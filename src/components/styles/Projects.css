@@ -115,6 +115,36 @@
     border-radius: 15px;
 }
 
+.SecondCard > .ProjectCardBackground {
+    background-image: url(/assets/Redule.png);
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.SecondCard > .ProjectCardBackground > .TextBackground {
+    color: white;
+    background-color: rgba(0,0,0,0.65);
+    height: 100%;
+    border-radius: 15px;
+}
+
+.ThirdCard > .ProjectCardBackground {
+    background-image: url(/assets/Sympl.png);
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ThirdCard > .ProjectCardBackground > .TextBackground {
+    color: white;
+    background-color: rgba(0,0,0,0.65);
+    height: 100%;
+    border-radius: 15px;
+}
+
+
+
 .FifthCard > .ProjectCardBackground {
     height: 100%;
     border-top-right-radius: 0;
