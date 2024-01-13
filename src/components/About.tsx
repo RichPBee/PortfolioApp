@@ -19,7 +19,7 @@ function About(): React.JSX.Element
                         be it from reading or gettting my hands dirty and making something new. My hobbies include
                         music, writing and gaming, and sometimes looking for ways to bring all of them together at once. <br/>
                         I love challenges, and I never shy away from difficult tasks. My background in physics helped me to develop strong
-                        logical and mathematical ability, which I try my best to employ in my work.
+                        logical ability and a deep understanding of mathematics.
                     </p>
                 </div>
             </div>

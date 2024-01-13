@@ -23,13 +23,15 @@ function ProjectCard({classProp, title, techStack, aboutText, buttonInfo}: IProj
     return (
         <div className={classProp}>
                 <div className="ProjectCardBackground">
-                    <div className="CardText">
-                        <h1>{title}</h1>
-                        <h3 className="projectTech">Tech: {techStack}</h3>
-                        {aboutText && <h4 className="projectDescription">{aboutText}</h4>}
-                    </div>
-                    <div className="CardButtons">
-                    {createButtons}
+                    <div className="TextBackground">
+                        <div className="CardText">
+                            <h1>{title}</h1>
+                            <h3 className="projectTech">Tech: {techStack}</h3>
+                            {aboutText && <h4 className="projectDescription">{aboutText}</h4>}
+                        </div>
+                        <div className="CardButtons">
+                        {createButtons}
+                        </div>
                     </div>
                 </div>  
         </div>
