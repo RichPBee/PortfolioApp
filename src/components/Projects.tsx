@@ -12,15 +12,15 @@ function Projects(): React.JSX.Element
                 id="FirstCard"
                 title = "Invaders Takeover"
                 techStack =  "TypeScript, PIXI"
-                aboutText = "Casino slots game developed at Light & Wonder using an internally developed PIXI.js based framework. I developed the planet selector transition, implemented bug fixes and various elements across UI, sound and animation."
+                aboutText = "Casino slots game developed at Light & Wonder using an internally developed PIXI.js based framework. I developed the planet selector transition, implemented bug fixes and various elements across UI, sound and animation. The development process for the game took a number of months, and required extensive collaboration with art, design and QA teams to achieve the finished product."
                 buttonInfo={cardButtonSettings.projectOne}
             />
             <ProjectCard 
                 classProp="ProjectCard SecondCard"
                 id="SecondCard"
-                title="Redule"
-                techStack =  "TypeScript, NodeJS, ElectronJS, Webpack, Snoowrap Reddit API"
-                aboutText = "ElectronJS desktop app that uses the reddit API to schedule posts and publish them using node-cron."
+                title="Launcher Tool"
+                techStack =  "TypeScript, NodeJS, ElectronJS, Webpack, Selenium Webdriver, zsh"
+                aboutText = "An ElectronJS app to automate the process of launch local engine servers for casino games at L&W. The app looks for default files in a users computer to determine launchable games, and also provides options for configuring the search directories. Using Selenium webdriver, a simple user-defined csv config and a zsh script, the tool is then able to launch a local page for play-testing and developing game clients, without the need to manually use the terminal. "
                 buttonInfo={cardButtonSettings.projectTwo}
             />
             <ProjectCard 
@@ -28,7 +28,7 @@ function Projects(): React.JSX.Element
                 id="ThirdCard"
                 title="Sympl"
                 techStack =  "TypeScript"
-                aboutText = "A basic modular framework for builing web pages. Uses a view controller to switch between pages, and a re-usable component design."
+                aboutText = "A basic modular framework for builing web pages. Uses a view controller to switch between pages, and a re-usable component design. This was primarily built as a learning project, and isn't fully fleshed out, but has the basic functionality for displaying a web page and setting up different views."
                 buttonInfo={cardButtonSettings.projectThree}
             />
             <ProjectCard 

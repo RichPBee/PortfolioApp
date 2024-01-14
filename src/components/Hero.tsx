@@ -13,7 +13,7 @@ function Hero(): React.JSX.Element
                     Rich Balfourth
                 </h1>
                 <h4>
-                    Hi, my name's Rich. I'm a developer with experience building web apps and HTML5 games.
+                    Junior developer with experience web-based casino games and front end applications using both vanilla JavaScript/TypeScript and frameworks.
                 </h4>
                 <div className="LinkButtons">
                     {/* <a href="" target="_blank">

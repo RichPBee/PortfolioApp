@@ -7,8 +7,8 @@ export const cardButtonSettings = {
     ],
     projectTwo: [
         {
-            text: 'Source Code',
-            url: 'https://github.com/RichPBee/reddit_post_scheduler'
+            text: 'Demo Video',
+            url: '/assets/Sympl.png'
         },
     ],
     projectThree: [
