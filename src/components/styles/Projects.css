@@ -113,7 +113,7 @@
 }
 
 .SecondCard > .ProjectCardBackground {
-    background-image: url(/assets/Redule.png);
+    background-image: url(/assets/LauncherToolScreenshot.png);
     border-radius: 15px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -155,6 +155,7 @@
 .CardText > h4 {
     font-size: 0.8em;
 }
+
 
 @Media (max-width: 800px) {
     .ProjectsSection {
@@ -220,6 +221,9 @@
         width: 90px;
     }
     
+    .ThirdCard > .ProjectCardBackground > .TextBackground > .CardButtons {
+        gap: 15px;    
+    }
 }
 
 @Media (max-width: 500px) 

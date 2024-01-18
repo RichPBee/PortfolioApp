@@ -8,7 +8,7 @@ export const cardButtonSettings = {
     projectTwo: [
         {
             text: 'Demo Video',
-            url: '/assets/Sympl.png'
+            url: './assets/LauncherTool_Compressed.mp4'
         },
     ],
     projectThree: [
@@ -16,6 +16,10 @@ export const cardButtonSettings = {
             text: 'Source Code',
             url: 'https://github.com/RichPBee/Sympl'
         },
+        {
+            text: 'Example (CV)',
+            url: 'https://richpbee.github.io/CVPage/'
+        }
     ],
     projectFour: [
         {

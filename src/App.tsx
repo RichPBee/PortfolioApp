@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import './App.css';
 import { useEffect, useState } from "react";
 import ScrollUp from "./components/ScrollUp";
-import Canvas from "./components/HeroCanvas";
 
 function App(): React.JSX.Element {
   const [showButton, setShowButton] = useState(false);

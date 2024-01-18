@@ -1,3 +1,4 @@
+
 interface IProjectCardProps {
     classProp: string;
     id: string;
@@ -9,18 +10,25 @@ interface IProjectCardProps {
         text: string, 
         url: string
     }[];
-
+    toggleModal?(toggle: boolean, url: string): void;
 }
 
-function ProjectCard({classProp, title, techStack, aboutText, buttonInfo}: IProjectCardProps) 
+function ProjectCard({classProp, title, techStack, aboutText, buttonInfo, toggleModal}: IProjectCardProps) 
 {
 
     const buttonClick = (url: string) => { 
+        if (toggleModal)
+        {
+            toggleModal(true, url);
+            return;
+        }
         window.open(url, '_blank');
-    }
+    };
+    
     const createButtons = buttonInfo.map((info, index) => <button className={`button-${index}`} key={info.text+'-'+index}onClick={() => buttonClick(info.url)}>{info.text}</button>)
 
     return (
+        <>
         <div className={classProp}>
                 <div className="ProjectCardBackground">
                     <div className="TextBackground">
@@ -35,6 +43,7 @@ function ProjectCard({classProp, title, techStack, aboutText, buttonInfo}: IProj
                     </div>
                 </div>  
         </div>
+        </>
     );
 }
 

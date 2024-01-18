@@ -1,11 +1,28 @@
 import ProjectCard from './ProjectCard';
 import { cardButtonSettings } from '../settings/ProjectCard';
 import './styles/Projects.css'
+import { useState } from 'react';
+import VideoModal from './VideoModal';
 
 function Projects(): React.JSX.Element
 {
+    const [inModal, setInModal] = useState(false);
+
+    const toggleModal = (toggle: boolean) => {
+        if (toggle) 
+        {
+            document.body.style.overflow = "hidden";
+        }
+        else 
+        {
+            document.body.style.overflow = "visible";
+        }
+        setInModal(toggle);
+    }
 
     return (
+        <>
+        {inModal && <VideoModal toggleModal={toggleModal}/>}
         <div className="ProjectsSection PageSection" id="Projects">
             <ProjectCard 
                 classProp='ProjectCard FirstCard'
@@ -20,8 +37,9 @@ function Projects(): React.JSX.Element
                 id="SecondCard"
                 title="Launcher Tool"
                 techStack =  "TypeScript, NodeJS, ElectronJS, Webpack, Selenium Webdriver, zsh"
-                aboutText = "An ElectronJS app to automate the process of launch local engine servers for casino games at L&W. The app looks for default files in a users computer to determine launchable games, and also provides options for configuring the search directories. Using Selenium webdriver, a simple user-defined csv config and a zsh script, the tool is then able to launch a local page for play-testing and developing game clients, without the need to manually use the terminal. "
+                aboutText = "An ElectronJS app to automate the process of launching local engine servers for casino games at L&W. The app looks for default files in a users computer to determine launchable games, and also provides options for configuring the search directories. Using Selenium webdriver, a simple user-defined csv config and a zsh script, the tool is then able to launch a local page for play-testing and developing game clients, without the need to manually use the terminal. "
                 buttonInfo={cardButtonSettings.projectTwo}
+                toggleModal={toggleModal}
             />
             <ProjectCard 
                 classProp="ProjectCard ThirdCard"
@@ -47,6 +65,7 @@ function Projects(): React.JSX.Element
                 buttonInfo={cardButtonSettings.projectFive}
             /> */}
         </div>
+        </>
     )
 }
 
