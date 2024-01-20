@@ -8,13 +8,13 @@ function Canvas() {
     let oldTimeStamp: number;
     let animationFrameId: number;
     
-    const randomPos = (type: string, ctx: CanvasRenderingContext2D): number => { 
+    const randomPos = (type: string): number => { 
         switch (type)
         {
             case 'x':
-                return (Math.random() * (ctx.canvas.width - 1) + 1);
+                return (Math.random() * (window.innerWidth - 1) + 1);
             case 'y':
-                return (Math.random() * (ctx.canvas.height- 1) + 1);
+                return (Math.random() * (window.innerHeight - 1) + 1);
             default: 
                 return 1;
         }
@@ -38,8 +38,8 @@ function Canvas() {
     const createCircles = (ctx: CanvasRenderingContext2D) => {
         if (canvasObjects.length > 0) {canvasObjects = []};
         for (let i = 0; i < 30; i++) {
-            let x = randomPos('x', ctx);
-            let y = randomPos('y', ctx);
+            let x = randomPos('x');
+            let y = randomPos('y');
             let radius = (Math.random() * 30) + 4;
             let vx = ((Math.random() * (700 - 20) + 20) * velMult())/radius;
             let vy = ((Math.random() * (700 - 20) + 20) * velMult())/radius;
@@ -51,8 +51,8 @@ function Canvas() {
 
     const addCircles = (ctx: CanvasRenderingContext2D, amount: number) => {
         for (let i = 0; i < amount; i++) {
-            let x = randomPos('x', ctx);
-            let y = randomPos('y', ctx);
+            let x = randomPos('x');
+            let y = randomPos('y');
             let radius = (Math.random() * 30) + 4;
             let vx = ((Math.random() * (700 - 20) + 20) * velMult())/radius;
             let vy = ((Math.random() * (700 - 20) + 20) * velMult())/radius;
