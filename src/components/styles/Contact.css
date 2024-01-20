@@ -57,6 +57,7 @@ input[name="title"], input[name="email"], input[name="name"]{
     max-height: 100%;
     color: white;
     outline: none;
+    resize: none;
 }
 
 .textArea::placeholder
